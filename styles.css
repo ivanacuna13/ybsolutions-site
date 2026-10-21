@@ -346,3 +346,55 @@ footer .brand{margin-bottom:20px}
 }
 .link{white-space:nowrap}
 .shead p .link{display:flex;width:max-content;margin-top:16px}
+
+/* phone tuning */
+.mbar{display:none}
+@media (max-width:640px){
+  .topbar{display:none}
+  .menu{inset:74px 0 auto 0}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy-deep);padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;box-shadow:0 -8px 24px rgba(0,0,0,.25);transform:translateY(110%);transition:transform .35s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;font-family:var(--head);text-transform:uppercase;letter-spacing:.08em;font-size:15px;border:2px solid rgba(255,255,255,.5);color:#fff}
+  .mbar a:last-child{background:var(--gold);border-color:var(--gold);color:var(--navy-deep)}
+  .mbar svg{width:18px;height:18px}
+  section{padding:64px 0}
+  .hero{padding:64px 0 0;flex-direction:column;align-items:stretch}
+  .hero h1{font-size:44px}
+  .hero .lead{margin:18px 0 28px;font-size:18px}
+  .hero .ctas{gap:12px}
+  .hero-states{position:relative;margin-top:56px}
+  .hero-states .wrap{flex-wrap:wrap;justify-content:center;height:auto;padding:14px 16px;gap:8px 14px;font-size:13.5px;white-space:normal}
+  .hero-states b{flex-basis:100%;text-align:center}
+  .hero-states i{width:5px;height:5px}
+  .phero h1{font-size:36px}
+  .phero .lead{font-size:17.5px}
+  h2{font-size:32px}
+  .shead{margin-bottom:36px}
+  .split{gap:44px}
+  .values{grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+  .value{padding:22px 16px}
+  .value .ic{width:34px;height:34px;margin-bottom:12px}
+  .value h3{font-size:18px}
+  .value p{font-size:15px}
+  .svc .no{font-size:52px}
+  .reqs{gap:12px;margin-top:28px}
+  .req{padding:18px}
+  .cards{gap:18px}
+  .card .tx{padding:22px 22px 26px}
+  .ind{aspect-ratio:4/3}
+  .pillar{padding:32px 24px}
+  .people .tx{padding:56px 16px}
+  .project .tx{padding:40px 22px}
+  .project .im{min-height:240px}
+  .film-sec .lead{margin-bottom:30px}
+  .film{margin:0 -16px;box-shadow:none}
+  .stats .stat b{font-size:36px}
+  .map{height:300px}
+  .fcols{grid-template-columns:1fr 1fr;gap:30px 20px;padding-bottom:40px}
+  .fcols > div:first-child,.fcols > div:last-child{grid-column:1/-1}
+  .fsvc{display:none}
+  footer.site{padding-top:56px}
+  .fbot{flex-direction:column;gap:8px}
+}
+@media (max-width:640px){ .hero-states i{display:none} .hero-states .wrap{gap:6px 20px} }

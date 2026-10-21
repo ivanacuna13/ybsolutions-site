@@ -1,6 +1,7 @@
 (function(){
   var hdr=document.querySelector('header.site'), body=document.body;
-  function onScroll(){ if(hdr) hdr.classList.toggle('scrolled', window.scrollY>40); }
+  var mbar=document.querySelector('.mbar');
+  function onScroll(){ if(hdr) hdr.classList.toggle('scrolled', window.scrollY>40); if(mbar) mbar.classList.toggle('show', window.scrollY>window.innerHeight*0.6); }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
   var burger=document.querySelector('.burger');
